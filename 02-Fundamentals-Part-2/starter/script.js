@@ -97,3 +97,61 @@ if ((avgDolphin >= 2*avgKoalas )) {
 // console.log(avgDolphin,avgKoalas);
 // checkWinner(avgDolphin,avgKoalas);
 
+// ARRAYS
+
+const friends = ['aakash','lisa','lita'];
+const celebs =  new Array("eminem","dino","james");
+// console.log(friends,celebs);
+const obj = Object.assign(friends);
+// console.log((obj));
+
+// EXERCISE
+
+const calcAge =function(birthYear){
+    return 2037 -  birthYear;
+}
+const years = [1996,1997,1998,2000];
+// console.log(calcAge(years));
+
+// CODING  CHALLENGE
+
+// const calcTip = function(b){
+//     return b>=50 && b<=300 ? b * 0.15 : b * 0.2;
+// }
+
+
+// const bill = (billamount)=>{
+// const tip = (billamount/100)*15;
+// return tip;
+// }
+
+// const bills = new Array(125,555,44);
+// // const value1  = bill(100);
+// // const value2  = bill(1200);
+// // const value3  = bill(300);
+// // console.log(value1,value2,value3);
+// const tips = [calcTip(bills[0]),calcTip(bills[1]),calcTip(bills[2])];
+// console.log(tips);
+
+// const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+// console.log(total);
+
+
+// INTRODUCTION TO OBJECTS
+
+const aakashArray = [
+    'Aakash',
+    'Narwade',
+    2022-1996,
+    'Software Engineer',
+    ['Aaaa','Bbbb','Ccc']
+]
+
+const aakashObject = {
+    firstName : 'Aakash',
+    lastName: 'Narwade',
+    age:2022-1996,
+    job: 'Software Engineer',
+    friends : ['Aaa', 'Bbb', 'Ccc' ]
+}
+console.log(Object.assign({},aakashObject.friends));
