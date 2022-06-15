@@ -241,6 +241,31 @@ const years = [1996, 1997, 1998, 2000];
 // Continue is to exit the current iteration of the loop and continue to the next one.
 //  Break is used to completely terminate the whole loop.
 
+// const aakashArray = [
+//     "Aakash",
+//     "Narwade",
+//     2022 - 1996,
+//     "Software Engineer",
+//     ["Aaaa", "Bbbb", "Ccc"],
+// ];
+
+// const types = [];
+
+// for (let i = 0; i < aakashArray.length; i++) {
+//     // contiue=>
+//     // if (typeof aakashArray[i] !== 'string') continue;
+//     // console.log(aakashArray[i]);
+//     // populating the array
+//     types.push(typeof aakashArray[i]);
+//     // types[i]=typeof aakashArray[i]
+
+//     // break out the loop if we get the number
+//     if(typeof aakashArray[i] == 'number') break;
+// }
+// console.log(types);
+
+// Looping backwards and loop in loop
+
 const aakashArray = [
     "Aakash",
     "Narwade",
@@ -248,18 +273,14 @@ const aakashArray = [
     "Software Engineer",
     ["Aaaa", "Bbbb", "Ccc"],
 ];
+// for(let i = aakashArray.length-1; i >=0 ; i--){
+//     console.log(i);
+//     console.log(aakashArray[i]);
+// }
 
-const types = [];
-
-for (let i = 0; i < aakashArray.length; i++) {
-    // contiue=>
-    // if (typeof aakashArray[i] !== 'string') continue;
-    // console.log(aakashArray[i]);
-    // populating the array
-    types.push(typeof aakashArray[i]);
-    // types[i]=typeof aakashArray[i]
-
-    // break out the loop if we get the number
-    if(typeof aakashArray[i] == 'number') break;
+for(let exercise = 1; exercise <=3; exercise++) {
+    console.log(`this is exercise number ${exercise}`);
+    for(let repitition = 1;  repitition <=5; repitition++){
+        console.log(`Repition number ${repitition}`);
+    }
 }
-console.log(types);
