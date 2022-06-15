@@ -20,12 +20,10 @@
 // }
 // console.log(age);
 
-
-// function expression 
-const calcAge2 = function(birthYear){
-
-    return 2022-birthYear;
-}
+// function expression
+const calcAge2 = function (birthYear) {
+    return 2022 - birthYear;
+};
 const age2 = calcAge2(1995);
 // console.log(calcAge2);
 // console.log(age2);
@@ -51,7 +49,6 @@ const age2 = calcAge2(1995);
 // const retirementAge = yearUntilRetirement(1996,'aakash');
 // console.log(retirementAge);
 
-
 // const fruitCutIntoPieces = function(fruits) {
 //     return fruits * 4
 // }
@@ -60,7 +57,7 @@ const age2 = calcAge2(1995);
 //     const applePieces = fruitCutIntoPieces(apples);
 //     const orangePieces = fruitCutIntoPieces(oranges);
 //     const juice = `Juice with ${applePieces} pieces of apples nd ${orangePieces} pieces of oranges`;
-//     return juice ;    
+//     return juice ;
 // }
 // console.log(fruitProcessor(2,3));
 // console.log(5 + "9")
@@ -72,21 +69,20 @@ const age2 = calcAge2(1995);
 //     return `${firstName} returns in ${retirement} years`
 //     }
 
-const calcAverage = (s1,s2,s3)=>(s1+s2+s3)/3 ;
-let avgDolphin = calcAverage(44,23,71);
-let avgKoalas = calcAverage(65,54,49);
+const calcAverage = (s1, s2, s3) => (s1 + s2 + s3) / 3;
+let avgDolphin = calcAverage(44, 23, 71);
+let avgKoalas = calcAverage(65, 54, 49);
 // console.log(avgDolphin, avgKoalas);
 
-function checkWinner(avgDolphin, avgKoalas){
+function checkWinner(avgDolphin, avgKoalas) {
     console.log(avgDolphin, avgKoalas);
-if ((avgDolphin >= 2*avgKoalas )) {
-   return console.log(`Dolphin is winner by (${avgDolphin} vs ${avgKoalas})`)
-} else if ((avgKoalas >= 2*avgDolphin )){
-    return console.log(`Koalas is winner by ${avgKoalas} vs ${avgDolphin}`);
-} else{
-    return console.log(`no one is winner `);
-}
-
+    if (avgDolphin >= 2 * avgKoalas) {
+        return console.log(`Dolphin is winner by (${avgDolphin} vs ${avgKoalas})`);
+    } else if (avgKoalas >= 2 * avgDolphin) {
+        return console.log(`Koalas is winner by ${avgKoalas} vs ${avgDolphin}`);
+    } else {
+        return console.log(`no one is winner `);
+    }
 }
 
 // checkWinner(avgDolphin,avgKoalas);
@@ -99,18 +95,18 @@ if ((avgDolphin >= 2*avgKoalas )) {
 
 // ARRAYS
 
-const friends = ['aakash','lisa','lita'];
-const celebs =  new Array("eminem","dino","james");
+const friends = ["aakash", "lisa", "lita"];
+const celebs = new Array("eminem", "dino", "james");
 // console.log(friends,celebs);
 const obj = Object.assign(friends);
 // console.log((obj));
 
 // EXERCISE
 
-const calcAge =function(birthYear){
-    return 2037 -  birthYear;
-}
-const years = [1996,1997,1998,2000];
+const calcAge = function (birthYear) {
+    return 2037 - birthYear;
+};
+const years = [1996, 1997, 1998, 2000];
 // console.log(calcAge(years));
 
 // CODING  CHALLENGE
@@ -118,7 +114,6 @@ const years = [1996,1997,1998,2000];
 // const calcTip = function(b){
 //     return b>=50 && b<=300 ? b * 0.15 : b * 0.2;
 // }
-
 
 // const bill = (billamount)=>{
 // const tip = (billamount/100)*15;
@@ -136,16 +131,15 @@ const years = [1996,1997,1998,2000];
 // const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 // console.log(total);
 
-
 // INTRODUCTION TO OBJECTS
 
 const aakashArray = [
-    'Aakash',
-    'Narwade',
-    2022-1996,
-    'Software Engineer',
-    ['Aaaa','Bbbb','Ccc']
-]
+    "Aakash",
+    "Narwade",
+    2022 - 1996,
+    "Software Engineer",
+    ["Aaaa", "Bbbb", "Ccc"],
+];
 
 // const aakashObject = {
 //     firstName : 'Aakash',
@@ -155,14 +149,13 @@ const aakashArray = [
 //     friends : ['Aaa', 'Bbb', 'Ccc' ]
 // }
 
-
 // Rough example on null being object type
 // function isObject(object) {
 //     return typeof object === 'object' && object == null;
 //   }
 //   isObject({ prop: 'Value' }); // => true
 //   isObject(15);                // => false
-//  console.log( isObject(null));     
+//  console.log( isObject(null));
 // console.log(Object.assign({},aakashObject['friends']));
 
 // const interestedIn = prompt("What do you want to know about Aakash? Choose between firstName, lastName, age , job, friends");
@@ -181,13 +174,11 @@ const aakashArray = [
 
 // console.log(aakashObject["friends"].length);
 
-// // Challenge 
+// // Challenge
 // // Aakash has 3 friends and his best friends is called "Bbb"
 
 // const str = `${aakashObject.firstName} has ${aakashObject["friends"].length} best friends and is called ${aakashObject.friends[1]}`;
 // console.log(str);
-
-
 
 // ****************OBJECT METHODS*******************
 // this keyword
@@ -218,3 +209,28 @@ const aakashArray = [
 // console.log(aakashObject.age)
 // console.log(aakashObject.age)
 
+// **********CODING CHALLENGE 3**************
+
+const markMiller = {
+    fullName: "Mark Miller",
+    mass: 78,
+    height: 1.69,
+    calcBMI: function () {
+        this.markBMI = (this.mass) / (this.height * this.height);
+        return this.markBMI;
+    },
+};
+
+const johnSmith = {
+    fullName: "John Smith",
+    mass: 92,
+    height: 1.95,
+    calcBMI: function () {
+        this.johnBMI = (this.mass) / (this.height * this.height);
+        return this.johnBMI;
+    },
+};
+
+console.log(markMiller.calcBMI() > johnSmith.calcBMI()
+    ? `${markMiller.fullName}'s BMI(${markMiller.markBMI}) is higher than ${johnSmith.fullName}'s BMI(${johnSmith.johnBMI})`
+    : `${johnSmith.fullName}'s BMI(${johnSmith.johnBMI}) is higher than ${markMiller.fullName}'s BMI(${markMiller.markBMI})`)
