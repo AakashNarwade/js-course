@@ -133,13 +133,13 @@ const years = [1996, 1997, 1998, 2000];
 
 // INTRODUCTION TO OBJECTS
 
-const aakashArray = [
-    "Aakash",
-    "Narwade",
-    2022 - 1996,
-    "Software Engineer",
-    ["Aaaa", "Bbbb", "Ccc"],
-];
+// const aakashArray = [
+//     "Aakash",
+//     "Narwade",
+//     2022 - 1996,
+//     "Software Engineer",
+//     ["Aaaa", "Bbbb", "Ccc"],
+// ];
 
 // const aakashObject = {
 //     firstName : 'Aakash',
@@ -211,26 +211,55 @@ const aakashArray = [
 
 // **********CODING CHALLENGE 3**************
 
-const markMiller = {
-    fullName: "Mark Miller",
-    mass: 78,
-    height: 1.69,
-    calcBMI: function () {
-        this.markBMI = (this.mass) / (this.height * this.height);
-        return this.markBMI;
-    },
-};
+// const markMiller = {
+//     fullName: "Mark Miller",
+//     mass: 78,
+//     height: 1.69,
+//     calcBMI: function () {
+//         this.markBMI = (this.mass) / (this.height * this.height);
+//         return this.markBMI;
+//     },
+// };
 
-const johnSmith = {
-    fullName: "John Smith",
-    mass: 92,
-    height: 1.95,
-    calcBMI: function () {
-        this.johnBMI = (this.mass) / (this.height * this.height);
-        return this.johnBMI;
-    },
-};
+// const johnSmith = {
+//     fullName: "John Smith",
+//     mass: 92,
+//     height: 1.95,
+//     calcBMI: function () {
+//         this.johnBMI = (this.mass) / (this.height * this.height);
+//         return this.johnBMI;
+//     },
+// };
 
-console.log(markMiller.calcBMI() > johnSmith.calcBMI()
-    ? `${markMiller.fullName}'s BMI(${markMiller.markBMI}) is higher than ${johnSmith.fullName}'s BMI(${johnSmith.johnBMI})`
-    : `${johnSmith.fullName}'s BMI(${johnSmith.johnBMI}) is higher than ${markMiller.fullName}'s BMI(${markMiller.markBMI})`)
+// console.log(markMiller.calcBMI() > johnSmith.calcBMI()
+//     ? `${markMiller.fullName}'s BMI(${markMiller.markBMI}) is higher than ${johnSmith.fullName}'s BMI(${johnSmith.johnBMI})`
+//     : `${johnSmith.fullName}'s BMI(${johnSmith.johnBMI}) is higher than ${markMiller.fullName}'s BMI(${markMiller.markBMI})`)
+
+
+// ****** break,continue in loop***********
+
+// Continue is to exit the current iteration of the loop and continue to the next one.
+//  Break is used to completely terminate the whole loop.
+
+const aakashArray = [
+    "Aakash",
+    "Narwade",
+    2022 - 1996,
+    "Software Engineer",
+    ["Aaaa", "Bbbb", "Ccc"],
+];
+
+const types = [];
+
+for (let i = 0; i < aakashArray.length; i++) {
+    // contiue=>
+    // if (typeof aakashArray[i] !== 'string') continue;
+    // console.log(aakashArray[i]);
+    // populating the array
+    types.push(typeof aakashArray[i]);
+    // types[i]=typeof aakashArray[i]
+
+    // break out the loop if we get the number
+    if(typeof aakashArray[i] == 'number') break;
+}
+console.log(types);
