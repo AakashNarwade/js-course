@@ -154,4 +154,37 @@ const aakashObject = {
     job: 'Software Engineer',
     friends : ['Aaa', 'Bbb', 'Ccc' ]
 }
-console.log(Object.assign({},aakashObject.friends));
+
+
+// Rough example on null being object type
+// function isObject(object) {
+//     return typeof object === 'object' && object == null;
+//   }
+//   isObject({ prop: 'Value' }); // => true
+//   isObject(15);                // => false
+//  console.log( isObject(null));     
+// console.log(Object.assign({},aakashObject['friends']));
+
+const interestedIn = prompt("What do you want to know about Aakash? Choose between firstName, lastName, age , job, friends");
+console.log(interestedIn, typeof(interestedIn));
+
+aakashObject.location = "Mumbai";
+aakashObject["contact"] = 9999999999;
+
+if (aakashObject[interestedIn]) {
+    // console.log(interestedIn);
+    console.log(aakashObject[interestedIn]);
+    // console.log("interseted in is location");
+} else {
+    console.log('values are not proper');
+}
+
+console.log(aakashObject["friends"].length);
+
+// Challenge 
+// Aakash has 3 friends and his best friends is called "Bbb"
+
+const str = `${aakashObject.firstName} has ${aakashObject["friends"].length} best friends and is called ${aakashObject.friends[1]}`;
+console.log(str);
+
+
