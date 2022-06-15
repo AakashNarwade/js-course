@@ -147,13 +147,13 @@ const aakashArray = [
     ['Aaaa','Bbbb','Ccc']
 ]
 
-const aakashObject = {
-    firstName : 'Aakash',
-    lastName: 'Narwade',
-    age:2022-1996,
-    job: 'Software Engineer',
-    friends : ['Aaa', 'Bbb', 'Ccc' ]
-}
+// const aakashObject = {
+//     firstName : 'Aakash',
+//     lastName: 'Narwade',
+//     age:2022-1996,
+//     job: 'Software Engineer',
+//     friends : ['Aaa', 'Bbb', 'Ccc' ]
+// }
 
 
 // Rough example on null being object type
@@ -165,26 +165,45 @@ const aakashObject = {
 //  console.log( isObject(null));     
 // console.log(Object.assign({},aakashObject['friends']));
 
-const interestedIn = prompt("What do you want to know about Aakash? Choose between firstName, lastName, age , job, friends");
-console.log(interestedIn, typeof(interestedIn));
+// const interestedIn = prompt("What do you want to know about Aakash? Choose between firstName, lastName, age , job, friends");
+// console.log(interestedIn, typeof(interestedIn));
 
-aakashObject.location = "Mumbai";
-aakashObject["contact"] = 9999999999;
+// aakashObject.location = "Mumbai";
+// aakashObject["contact"] = 9999999999;
 
-if (aakashObject[interestedIn]) {
-    // console.log(interestedIn);
-    console.log(aakashObject[interestedIn]);
-    // console.log("interseted in is location");
-} else {
-    console.log('values are not proper');
+// if (aakashObject[interestedIn]) {
+//     // console.log(interestedIn);
+//     console.log(aakashObject[interestedIn]);
+//     // console.log("interseted in is location");
+// } else {
+//     console.log('values are not proper');
+// }
+
+// console.log(aakashObject["friends"].length);
+
+// // Challenge 
+// // Aakash has 3 friends and his best friends is called "Bbb"
+
+// const str = `${aakashObject.firstName} has ${aakashObject["friends"].length} best friends and is called ${aakashObject.friends[1]}`;
+// console.log(str);
+
+
+
+// ****************OBJECT METHODS*******************
+// this keyword
+
+const aakashObject = {
+    firstName : 'Aakash',
+    lastName: 'Narwade',
+    birthYear:1996,
+    job: 'Software Engineer',
+    friends : ['Aaa', 'Bbb', 'Ccc' ],
+    hasDriversLicence: true,
+    calcAge: function(){
+        console.log(this)
+        return 2037-this.birthYear
+    }
 }
 
-console.log(aakashObject["friends"].length);
-
-// Challenge 
-// Aakash has 3 friends and his best friends is called "Bbb"
-
-const str = `${aakashObject.firstName} has ${aakashObject["friends"].length} best friends and is called ${aakashObject.friends[1]}`;
-console.log(str);
-
-
+// console.log(this)
+console.log(aakashObject.calcAge())
