@@ -191,31 +191,30 @@ const aakashArray = [
 
 // ****************OBJECT METHODS*******************
 // this keyword
-
-const aakashObject = {
-    firstName : 'Aakash',
-    lastName: 'Narwade',
-    birthYear:1996,
-    job: 'Software Engineer',
-    friends : ['Aaa', 'Bbb', 'Ccc' ],
-    hasDriversLicence: true,
-    calcAge: function(){
-        // console.log(this)
-        // return 2037-this.birthYear
-        return  this.age = 2022 - this.birthYear;
-        //  return this.age;
-    },
-    getSummary: function(){
-       return `${this.firstName} is ${this.age}-year old ${this.job}, and he has ${this.hasDriversLicence ? "a" : "no"} drivers license`
-    }
-}
-
-console.log(aakashObject.calcAge())
-console.log(aakashObject.getSummary())
-// console.log(aakashObject.age)
-// console.log(aakashObject.age)
-// console.log(aakashObject.age)
-
-
 // ********Challenge********
 // Aakash is 25-year old Software Engineer , and he has a/no driver license
+
+// const aakashObject = {
+//     firstName : 'Aakash',
+//     lastName: 'Narwade',
+//     birthYear:1996,
+//     job: 'Software Engineer',
+//     friends : ['Aaa', 'Bbb', 'Ccc' ],
+//     hasDriversLicence: true,
+//     calcAge: function(){
+//         // console.log(this)
+//         // return 2037-this.birthYear
+//         return  this.age = 2022 - this.birthYear;
+//         //  return this.age;
+//     },
+//     getSummary: function(){
+//        return `${this.firstName} is ${this.age}-year old ${this.job}, and he has ${this.hasDriversLicence ? "a" : "no"} drivers license`
+//     }
+// }
+
+// console.log(aakashObject.calcAge())
+// console.log(aakashObject.getSummary())
+// console.log(aakashObject.age)
+// console.log(aakashObject.age)
+// console.log(aakashObject.age)
+
