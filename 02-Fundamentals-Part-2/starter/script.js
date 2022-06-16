@@ -266,21 +266,31 @@ const years = [1996, 1997, 1998, 2000];
 
 // Looping backwards and loop in loop
 
-const aakashArray = [
-    "Aakash",
-    "Narwade",
-    2022 - 1996,
-    "Software Engineer",
-    ["Aaaa", "Bbbb", "Ccc"],
-];
-// for(let i = aakashArray.length-1; i >=0 ; i--){
-//     console.log(i);
-//     console.log(aakashArray[i]);
+// const aakashArray = [
+//     "Aakash",
+//     "Narwade",
+//     2022 - 1996,
+//     "Software Engineer",
+//     ["Aaaa", "Bbbb", "Ccc"],
+// ];
+// // for(let i = aakashArray.length-1; i >=0 ; i--){
+// //     console.log(i);
+// //     console.log(aakashArray[i]);
+// // }
+
+// for(let exercise = 1; exercise <=3; exercise++) {
+//     console.log(`this is exercise number ${exercise}`);
+//     for(let repitition = 1;  repitition <=5; repitition++){
+//         console.log(`Repition number ${repitition}`);
+//     }
 // }
 
-for(let exercise = 1; exercise <=3; exercise++) {
-    console.log(`this is exercise number ${exercise}`);
-    for(let repitition = 1;  repitition <=5; repitition++){
-        console.log(`Repition number ${repitition}`);
-    }
+
+// ****************while loop*************
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+while(dice != 6) {
+    console.log(`dice is ${dice}`);
+ dice = Math.trunc(Math.random() * 6) + 1;
+ if(dice == 6) console.log(`dice is equal to ${dice}`)
 }
