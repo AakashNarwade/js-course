@@ -288,9 +288,48 @@ const years = [1996, 1997, 1998, 2000];
 
 // ****************while loop*************
 
-let dice = Math.trunc(Math.random() * 6) + 1;
-while(dice != 6) {
-    console.log(`dice is ${dice}`);
- dice = Math.trunc(Math.random() * 6) + 1;
- if(dice == 6) console.log(`dice is equal to ${dice}`)
+// let dice = Math.trunc(Math.random() * 6) + 1;
+// while(dice != 6) {
+//     console.log(`dice is ${dice}`);
+//  dice = Math.trunc(Math.random() * 6) + 1;
+//  if(dice == 6) console.log(`dice is equal to ${dice}`)
+// }
+
+// *********** CODING CHALLENGE 4 ************
+
+let bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+let tips = [];
+let totals = [];
+
+const calcTip = function (b) {
+    return b >= 50 && b <= 300 ? b * 0.15 : b * 0.2;
 }
+// const newBill = (billamount)=>{
+//     let tip = (billamount/100)*15;
+//     // const tv = billamount + tip;
+//     return tip;
+//     }
+// const totalValue = (t)=>{
+//     const tv = t + tip;
+//     return tv;
+// }
+
+for (let i = 0; i < bills.length; i++) {
+    // console.log(calcTip(bills[i]));
+    const tip = calcTip(bills[i]);
+    tips.push(tip);
+    totals.push(tip + bills[i])
+
+}
+// console.log(tips);
+// console.log(totals);
+
+function calcAverage1(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+
+         sum = sum + arr[i];
+    }
+    return sum/arr.length
+}
+console.log(calcAverage1(totals));
