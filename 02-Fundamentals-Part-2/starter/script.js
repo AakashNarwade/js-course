@@ -335,7 +335,6 @@ const years = [1996, 1997, 1998, 2000];
 // console.log(calcAverage1(totals));
 
 
-
 // In objects you can use for in loop to get property/keys , but cannot use for of loop, In order to access the value check below example\
 
 // ***********EXAMPLE**************
@@ -368,3 +367,6 @@ for (const i of games) {
 }
 // for of
 // OUTPUT console.log(i) ====> : soccer chess badminton 
+
+
+
