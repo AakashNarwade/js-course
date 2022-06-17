@@ -297,13 +297,13 @@ const years = [1996, 1997, 1998, 2000];
 
 // *********** CODING CHALLENGE 4 ************
 
-let bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
-let tips = [];
-let totals = [];
+// let bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+// let tips = [];
+// let totals = [];
 
-const calcTip = function (b) {
-    return b >= 50 && b <= 300 ? b * 0.15 : b * 0.2;
-}
+// const calcTip = function (b) {
+//     return b >= 50 && b <= 300 ? b * 0.15 : b * 0.2;
+// }
 // const newBill = (billamount)=>{
 //     let tip = (billamount/100)*15;
 //     // const tv = billamount + tip;
@@ -314,22 +314,56 @@ const calcTip = function (b) {
 //     return tv;
 // }
 
-for (let i = 0; i < bills.length; i++) {
-    // console.log(calcTip(bills[i]));
-    const tip = calcTip(bills[i]);
-    tips.push(tip);
-    totals.push(tip + bills[i])
+// for (let i = 0; i < bills.length; i++) {
+//     // console.log(calcTip(bills[i]));
+//     const tip = calcTip(bills[i]);
+//     tips.push(tip);
+//     totals.push(tip + bills[i])
 
+// }
+// // console.log(tips);
+// // console.log(totals);
+
+// function calcAverage1(arr) {
+//     let sum = 0;
+//     for (let i = 0; i < arr.length; i++) {
+
+//          sum = sum + arr[i];
+//     }
+//     return sum/arr.length
+// }
+// console.log(calcAverage1(totals));
+
+
+
+// In objects you can use for in loop to get property/keys , but cannot use for of loop, In order to access the value check below example\
+
+// ***********EXAMPLE**************
+let play = {
+    1:"cricket",
+    2:"rugby",
+    3:"basketball"
 }
-// console.log(tips);
-// console.log(totals);
 
-function calcAverage1(arr) {
-    let sum = 0;
-    for (let i = 0; i < arr.length; i++) {
-
-         sum = sum + arr[i];
-    }
-    return sum/arr.length
+for (const i in play) {
+   console.log(i); 
 }
-console.log(calcAverage1(totals));
+// OUTPUT console.log(play[i]) ===>   :    cricket rugby basketball
+// OUTPUT console.log(i) ====> :  1 2 3
+
+// You can use both for in and for of loop to get keys and values respectively
+
+// ***********EXAMPLE**************
+let games = ["soccer", "chess", "badminton"]
+
+for (const i in games) {
+    console.log(i)
+}
+// for in
+// OUTPUT : 0 1 2 ==> gives keys 
+
+for (const i of games) {
+    console.log(i);
+}
+// for of
+// OUTPUT console.log(i) ====> : soccer chess badminton 
