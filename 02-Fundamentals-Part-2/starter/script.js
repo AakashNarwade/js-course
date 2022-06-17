@@ -353,6 +353,7 @@ for (const i in play) {
 
 // You can use both for in and for of loop to get keys and values respectively
 
+
 // ***********EXAMPLE**************
 let games = ["soccer", "chess", "badminton"]
 
