@@ -362,6 +362,7 @@ for (const i in games) {
 // for in
 // OUTPUT : 0 1 2 ==> gives keys 
 
+
 for (const i of games) {
     console.log(i);
 }
