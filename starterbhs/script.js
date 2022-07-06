@@ -125,17 +125,37 @@ const addArrow = (a, b) => a + b;
 // jonas.calcAge();
 
 // Solution to regular function call has the this keyword set to undefined
+// solution 1
+// const jonas = {
+//   firstName: 'aakash',
+//   year: 1991,
+//   calcAge: function () {
+//     // console.log(this);
+//     // console.log(2037 - this.year);
+//     const self = this;
+//     const isMillenial = function () {
+//       console.log(self);
+//       console.log(self.year >= 1986 && self.year <= 1996);
+//     };
+//     isMillenial();
+//   },
+//   greet: () => console.log(`Hey ${this.firstName}`, this),
+// };
 
+// // jonas.greet();
+// jonas.calcAge();
+
+// solution 2
 const jonas = {
   firstName: 'aakash',
   year: 1991,
   calcAge: function () {
     // console.log(this);
     // console.log(2037 - this.year);
-    const self = this;
-    const isMillenial = function () {
-      console.log(self);
-      console.log(self.year >= 1986 && self.year <= 1996);
+
+    const isMillenial = () => {
+      console.log(this);
+      console.log(this.year >= 1986 && this.year <= 1996);
     };
     isMillenial();
   },
