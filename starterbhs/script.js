@@ -71,15 +71,32 @@ const addArrow = (a, b) => a + b;
 // console.log(y === window.y); //false
 // console.log(z === window.z); //false
 
-console.log(this);
-const calcage = function (birthYear) {
-  console.log(2037 - birthYear);
-  console.log(this); //undefined when strict mode , global window object when not in strict mode
-};
-calcage(89);
+// console.log(this);
+// const calcage = function (birthYear) {
+//   console.log(2037 - birthYear);
+//   console.log(this); //undefined when strict mode , global window object when not in strict mode
+// };
+// calcage(89);
 
-const calcArrow = birthYear => {
-  console.log(2037 - birthYear);
-  console.log(this); //window , coz it takes this from parent scope
+// const calcArrow = birthYear => {
+//   console.log(2037 - birthYear);
+//   console.log(this); //window , coz it takes this from parent scope
+// };
+// calcArrow(89);
+
+const jonas = {
+  year: 1991,
+  calcAge: function () {
+    console.log(this);
+    console.log(2037 - this.year);
+  },
 };
-calcArrow(89);
+jonas.calcAge();
+
+const matilda = {
+  year: 2000,
+};
+matilda.calcAge = jonas.calcAge;
+matilda.calcAge();
+
+// this keyword always points to the object  it is  calling the method
