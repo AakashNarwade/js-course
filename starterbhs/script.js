@@ -182,9 +182,9 @@ const addArrow = (a, b) => a + b;
 let lastName = 'williams';
 let oldLastName = lastName;
 lastName = 'Davis';
-console.log(lastName, oldLastName);
+// console.log(lastName, oldLastName);
 
-//refrence types
+//Reference types
 const jessica = {
   firstName: 'Jessica',
   lastName: 'williams',
@@ -192,9 +192,28 @@ const jessica = {
 };
 const marriedJessica = jessica;
 marriedJessica.lastName = 'Davis';
-console.log('Before marriage:', jessica);
-console.log('After marriage:', marriedJessica);
+// console.log('Before marriage:', jessica);
+// console.log('After marriage:', marriedJessica);
 
 //marriedJessica={}
 // => TypeError :assignment to constant , coz this empty object will be stored in the new location in memory and the refernce of the memory has to change wich is not possible as it is in stack and is const.
 // if it would have let , we could do this.
+
+// Copying objects
+const jessica2 = {
+  firstName: 'Jessica',
+  lastName: 'williams',
+  age: 27,
+  family: ['Alice', 'Bob'],
+};
+
+// shallow copies
+const jessicaCopy = Object.assign({}, jessica2);
+jessicaCopy.lastName = 'Narwade';
+console.log('Before marriage:', jessica2);
+console.log('After marriage:', jessicaCopy);
+
+jessicaCopy.family.push('mary');
+jessicaCopy.family.push('john');
+console.log('After marriage:', jessicaCopy);
+console.log('Before marriage:', jessica2);
