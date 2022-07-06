@@ -109,10 +109,17 @@ const jonas = {
   firstName: 'aakash',
   year: 1991,
   calcAge: function () {
-    console.log(this);
-    console.log(2037 - this.year);
+    // console.log(this);
+    // console.log(2037 - this.year);
+
+    const isMillenial = function () {
+      console.log(this);
+      console.log(this.year >= 1986 && this.year <= 1996);
+    };
+    isMillenial(); //regular function call has the this keyword set to undefined
   },
   greet: () => console.log(`Hey ${this.firstName}`, this),
 };
 
-jonas.greet();
+// jonas.greet();
+jonas.calcAge();
