@@ -100,3 +100,7 @@ matilda.calcAge = jonas.calcAge;
 matilda.calcAge();
 
 // this keyword always points to the object  it is  calling the method
+
+const f = jonas.calcAge;
+f();
+// undefined ,  coz in f calcage is just a generl function which is not attached to any object .
