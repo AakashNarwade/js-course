@@ -30,8 +30,24 @@
 // calcAge(1996);
 
 // Hoisting in variables
-console.log(me); //undefined
-console.log(job);
-var me = 'aakash';
-let job = 'software engineer';
-const year = 1996;
+// console.log(me); //undefined
+// console.log(job);
+// var me = 'aakash';
+// let job = 'software engineer';
+// const year = 1996;
+
+// Hoisting in functions
+console.log(addDecl(6, 8)); //14
+// console.log(addExpr(9, 7));
+console.log(addExpr(3, 4)); //addExpr on lno 48 is declared as var and hence value is undefined , i.e undefined(3,4) which gives error addExpr is not a function
+
+// console.log(addArrow(8, 7));
+function addDecl(a, b) {
+  return a + b;
+}
+
+var addExpr = function (a, b) {
+  return a + b;
+};
+
+const addArrow = (a, b) => a + b;
