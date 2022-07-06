@@ -56,17 +56,30 @@ const addArrow = (a, b) => a + b;
 // console.log(!numberCart);
 // console.log(typeof undefined);
 
-if (!numberCart) deleteShoppingCart();
+// if (!numberCart) deleteShoppingCart();
 
-// let numberCart = 10;
-var numberCart = 10;
-function deleteShoppingCart() {
-  console.log('all products are deleted');
-}
+// // let numberCart = 10;
+// var numberCart = 10;
+// function deleteShoppingCart() {
+//   console.log('all products are deleted');
+// }
 
-var x = 1;
-let y = 9;
-const z = 10;
-console.log(x === window.x); //true
-console.log(y === window.y); //false
-console.log(z === window.z); //false
+// var x = 1;
+// let y = 9;
+// const z = 10;
+// console.log(x === window.x); //true
+// console.log(y === window.y); //false
+// console.log(z === window.z); //false
+
+console.log(this);
+const calcage = function (birthYear) {
+  console.log(2037 - birthYear);
+  console.log(this); //undefined when strict mode , global window object when not in strict mode
+};
+calcage(89);
+
+const calcArrow = birthYear => {
+  console.log(2037 - birthYear);
+  console.log(this); //window , coz it takes this from parent scope
+};
+calcArrow(89);
