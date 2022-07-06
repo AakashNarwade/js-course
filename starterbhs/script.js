@@ -146,34 +146,55 @@ const addArrow = (a, b) => a + b;
 // jonas.calcAge();
 
 // solution 2
-const jonas = {
-  firstName: 'aakash',
-  year: 1991,
-  calcAge: function () {
-    // console.log(this);
-    // console.log(2037 - this.year);
+// const jonas = {
+//   firstName: 'aakash',
+//   year: 1991,
+//   calcAge: function () {
+//     // console.log(this);
+//     // console.log(2037 - this.year);
 
-    const isMillenial = () => {
-      //   console.log(this);
-      //   console.log(this.year >= 1986 && this.year <= 1996);
-    };
-    isMillenial();
-  },
-  greet: () => console.log(`Hey ${this.firstName}`, this),
+//     const isMillenial = () => {
+//       //   console.log(this);
+//       //   console.log(this.year >= 1986 && this.year <= 1996);
+//     };
+//     isMillenial();
+//   },
+//   greet: () => console.log(`Hey ${this.firstName}`, this),
+// };
+
+// // jonas.greet();
+// jonas.calcAge();
+
+// // arguments keyword
+// const addExpression = function (a, b) {
+//   console.log(arguments);
+//   return a + b;
+// };
+// addExpression(2, 3, 4, 5);
+
+// var addArrowExpression = (a, b) => {
+//   //   console.log(arguments);
+//   return a + b;
+// };
+// addArrowExpression(5, 4, 4, 3, 2);
+
+//Primitive types
+let lastName = 'williams';
+let oldLastName = lastName;
+lastName = 'Davis';
+console.log(lastName, oldLastName);
+
+//refrence types
+const jessica = {
+  firstName: 'Jessica',
+  lastName: 'williams',
+  age: 27,
 };
+const marriedJessica = jessica;
+marriedJessica.lastName = 'Davis';
+console.log('Before marriage:', jessica);
+console.log('After marriage:', marriedJessica);
 
-// jonas.greet();
-jonas.calcAge();
-
-// arguments keyword
-const addExpression = function (a, b) {
-  console.log(arguments);
-  return a + b;
-};
-addExpression(2, 3, 4, 5);
-
-var addArrowExpression = (a, b) => {
-  console.log(arguments);
-  return a + b;
-};
-addArrowExpression(5, 4, 4, 3, 2);
+//marriedJessica={}
+// => TypeError :assignment to constant , coz this empty object will be stored in the new location in memory and the refernce of the memory has to change wich is not possible as it is in stack and is const.
+// if it would have let , we could do this.
