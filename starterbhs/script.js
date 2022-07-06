@@ -84,23 +84,35 @@ const addArrow = (a, b) => a + b;
 // };
 // calcArrow(89);
 
+// const jonas = {
+//   year: 1991,
+//   calcAge: function () {
+//     console.log(this);
+//     console.log(2037 - this.year);
+//   },
+// };
+// jonas.calcAge();
+
+// const matilda = {
+//   year: 2000,
+// };
+// matilda.calcAge = jonas.calcAge;
+// matilda.calcAge();
+
+// this keyword always points to the object  it is  calling the method
+
+// const f = jonas.calcAge;
+// f();
+// undefined ,  coz in f calcage is just a generl function which is not attached to any object .
+
 const jonas = {
+  firstName: 'aakash',
   year: 1991,
   calcAge: function () {
     console.log(this);
     console.log(2037 - this.year);
   },
+  greet: () => console.log(`Hey ${this.firstName}`, this),
 };
-jonas.calcAge();
 
-const matilda = {
-  year: 2000,
-};
-matilda.calcAge = jonas.calcAge;
-matilda.calcAge();
-
-// this keyword always points to the object  it is  calling the method
-
-const f = jonas.calcAge;
-f();
-// undefined ,  coz in f calcage is just a generl function which is not attached to any object .
+jonas.greet();
