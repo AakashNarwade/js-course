@@ -37,9 +37,9 @@
 // const year = 1996;
 
 // Hoisting in functions
-console.log(addDecl(6, 8)); //14
+// console.log(addDecl(6, 8)); //14
 // console.log(addExpr(9, 7));
-console.log(addExpr(3, 4)); //addExpr on lno 48 is declared as var and hence value is undefined , i.e undefined(3,4) which gives error addExpr is not a function
+// console.log(addExpr(3, 4)); //addExpr on lno 48 is declared as var and hence value is undefined , i.e undefined(3,4) which gives error addExpr is not a function
 
 // console.log(addArrow(8, 7));
 function addDecl(a, b) {
@@ -51,3 +51,14 @@ var addExpr = function (a, b) {
 };
 
 const addArrow = (a, b) => a + b;
+
+// boolean value of undefined is always false.The value of Not only undefined but also null, false, NaN, empty string is also false.
+// console.log(!numberCart);
+// console.log(typeof undefined);
+
+if (!numberCart) deleteShoppingCart();
+
+var numberCart = 10;
+function deleteShoppingCart() {
+  console.log('all products are deleted');
+}
