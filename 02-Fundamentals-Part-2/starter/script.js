@@ -354,20 +354,33 @@ for (const i in play) {
 
 
 // ***********EXAMPLE**************
-let games = ["soccer", "chess", "badminton"]
-
-for (const i in games) {
-    console.log(i)
-}
-// for in
-// OUTPUT : 0 1 2 ==> gives keys 
-
-
+let games = ["soccer", "chess", "badminton"];
 for (const i of games) {
     console.log(i);
 }
 // for of
 // OUTPUT console.log(i) ====> : soccer chess badminton 
+
+for (const i in games) {
+    console.log(i)
+}
+// for in
+// OUTPUT : 0 1 2 ==> gives keys  i.e index in case of arrays
+
+let g = {
+    a: "aakash",
+    b:"narwade"
+}
+for (const i in g){
+    console.log(i,"for in objects");
+}
+
+// for in gives keys in object as well as arrays
+for (const i of g){
+    console.log(i,"for of objects");
+}
+// Uncaught TypeError: g is not iterable
+
 
 
 
