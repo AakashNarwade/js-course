@@ -58,7 +58,15 @@ const addArrow = (a, b) => a + b;
 
 if (!numberCart) deleteShoppingCart();
 
+// let numberCart = 10;
 var numberCart = 10;
 function deleteShoppingCart() {
   console.log('all products are deleted');
 }
+
+var x = 1;
+let y = 9;
+const z = 10;
+console.log(x === window.x); //true
+console.log(y === window.y); //false
+console.log(z === window.z); //false
