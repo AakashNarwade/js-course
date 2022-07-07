@@ -63,6 +63,23 @@ console.log(pizza, risotto, otherFood);
 const { sat, ...weekdays } = restaurant.openingHours;
 console.log(sat, weekdays);
 
+// Functions
+const add = function (...args) {
+  console.log(args.length);
+  let sum = 0;
+  for (let index = 0; index <= args.length - 1; index++) {
+    // const element = array[index];
+    // console.log(index);
+    sum += args[index];
+  }
+  return sum;
+};
+
+// add(2, 3);
+const x = [23, 5, 7];
+console.log(add(3, 3, 4, 4, 5));
+console.log(add(...x));
+
 //*********************The Spread Operator**********//
 
 // nested objects
