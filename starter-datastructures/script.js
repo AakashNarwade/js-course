@@ -39,7 +39,15 @@ const restaurant = {
 
 // adding default values while destructuring objects
 const { menu = [], starterMenu: starters = [] } = restaurant;
-console.log(menu, starters);
+// console.log(menu, starters);
+
+// mutating variables
+let a = 111;
+let b = 999;
+let c, d;
+const obj = { a: 23, b: 7, c: 14 };
+({ a, b, c = 1, d = 1 } = obj);
+console.log(a, b, c, d);
 
 // let [main, , secondary] = restaurant.categories;
 // console.log(main, secondary);
