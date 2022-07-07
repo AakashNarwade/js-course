@@ -45,6 +45,17 @@ let [main, , secondary] = restaurant.categories;
 // console.log(main, secondary);
 
 // REceive 2 return values from a function using destructuring
-console.log(restaurant.order(2, 0));
+// console.log(restaurant.order(2, 0));
 const [starter, mainCourse] = restaurant.order(2, 0);
-console.log(starter, mainCourse);
+// console.log(starter, mainCourse);
+
+// nested destructuring
+const nested = [2, 4, [5, 6]];
+
+const [l, , [m, n]] = nested;
+console.log(l, m, n);
+// const [a, b, c] = nested;
+// console.log(a, b, ...c);
+
+const [i, , j] = nested;
+// console.log(i, j);
