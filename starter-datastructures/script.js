@@ -24,6 +24,11 @@ const restaurant = {
     console.log(starterIndex, mainIndex, address, time);
   },
 
+  orderPizza: function (mainIngredients, ...otherIngredients) {
+    console.log(mainIngredients);
+    console.log(otherIngredients);
+  },
+
   openingHours: {
     thu: {
       open: 12,
@@ -42,6 +47,8 @@ const restaurant = {
 
 //SPREAD , because on RIGHT side of =
 const arr = [1, 2, ...[3, 4]];
+
+restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
 
 //REST ,  because on LEFT side of =
 const [a, b, ...others] = [1, 2, [3, 4, 5]];
