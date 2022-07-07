@@ -40,18 +40,43 @@ const restaurant = {
   },
 };
 
-// nested objects
-const {
-  fri: { open: o, close: c },
-} = restaurant.openingHours;
-console.log(o, c);
+//SPREAD , because on RIGHT side of =
+const arr = [1, 2, ...[3, 4]];
 
-restaurant.orderDelivery({
-  starterIndex: 2,
-  mainIndex: 2,
-  address: 'hhh',
-  time: '22:30',
-});
+//REST ,  because on LEFT side of =
+const [a, b, ...others] = [1, 2, [3, 4, 5]];
+console.log(a, b);
+console.log(others);
+
+const { p = 1, q = 2, ...r } = restaurant;
+console.log(p, q);
+console.log(r);
+
+const [pizza, risotto, ...otherFood] = [
+  ...restaurant.mainMenu,
+  ...restaurant.starterMenu,
+];
+console.log(pizza, risotto, otherFood);
+
+// SPREAD in Objects
+
+const { sat, ...weekdays } = restaurant.openingHours;
+console.log(sat, weekdays);
+
+//*********************The Spread Operator**********//
+
+// nested objects
+// const {
+//   fri: { open: o, close: c },
+// } = restaurant.openingHours;
+// console.log(o, c);
+
+// restaurant.orderDelivery({
+//   starterIndex: 2,
+//   mainIndex: 2,
+//   address: 'hhh',
+//   time: '22:30',
+// });
 // const { name, categories, openingHours } = restaurant;
 // console.log(name, categories, openingHours);
 
