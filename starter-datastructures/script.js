@@ -31,11 +31,15 @@ const restaurant = {
   },
 };
 
-const { name, categories, openingHours } = restaurant;
-console.log(name, categories, openingHours);
+// const { name, categories, openingHours } = restaurant;
+// console.log(name, categories, openingHours);
 
-const { name: restaurantName, openingHours: hours } = restaurant;
-console.log(restaurantName, hours);
+// const { name: restaurantName, openingHours: hours } = restaurant;
+// console.log(restaurantName, hours);
+
+// adding default values while destructuring objects
+const { menu = [], starterMenu: starters = [] } = restaurant;
+console.log(menu, starters);
 
 // let [main, , secondary] = restaurant.categories;
 // console.log(main, secondary);
