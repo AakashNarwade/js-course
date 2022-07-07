@@ -11,6 +11,9 @@ const restaurant = {
   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+  order: function (starterIndex, mainIndex) {
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  },
 
   openingHours: {
     thu: {
@@ -29,7 +32,7 @@ const restaurant = {
 };
 
 let [main, , secondary] = restaurant.categories;
-console.log(main, secondary);
+// console.log(main, secondary);
 // let temp = main;
 
 // main = secondary;
@@ -39,4 +42,9 @@ console.log(main, secondary);
 
 // interchange values in array using destructuring
 [main, secondary] = [secondary, main];
-console.log(main, secondary);
+// console.log(main, secondary);
+
+// REceive 2 return values from a function using destructuring
+console.log(restaurant.order(2, 0));
+const [starter, mainCourse] = restaurant.order(2, 0);
+console.log(starter, mainCourse);
