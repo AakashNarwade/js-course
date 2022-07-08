@@ -21,12 +21,12 @@ const restaurant = {
     address,
     time = '23:00',
   }) {
-    console.log(starterIndex, mainIndex, address, time);
+    // console.log(starterIndex, mainIndex, address, time);
   },
 
   orderPizza: function (mainIngredients, ...otherIngredients) {
-    console.log(mainIngredients);
-    console.log(otherIngredients);
+    // console.log(mainIngredients);
+    // console.log(otherIngredients);
   },
 
   openingHours: {
@@ -45,7 +45,26 @@ const restaurant = {
   },
 };
 
-//Challenge
+const menu1 = [...restaurant.categories, ...restaurant.mainMenu];
+// console.log(menu1);
+
+for (const item of menu1) {
+  // console.log(item);
+}
+
+for (const key in menu1) {
+  // console.log(key + 1);
+}
+
+for (const [i, el] of menu1.entries()) {
+  console.log(`${i + 1}: ${el}`);
+}
+
+console.log([...menu1.entries()]);
+
+console.log(Object.entries(restaurant));
+
+// Coding Challenge
 
 const game = {
   team1: 'Bayern Munich',
@@ -95,14 +114,14 @@ const game = {
 const [players1, players2] = game.players;
 
 const [gk, ...fieldPlayers] = players1;
-console.log(gk, fieldPlayers);
+// console.log(gk, fieldPlayers);
 // const fieldPlayers = []
 // gk
-console.log(gk);
-console.log(fieldPlayers);
+// console.log(gk);
+// console.log(fieldPlayers);
 
 const allPlayers = [...players1, ...players2];
-console.log(allPlayers);
+// console.log(allPlayers);
 
 const Players1Final = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
 
@@ -110,10 +129,10 @@ const Players1Final = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
 // const {
 //   odds: { team1, x: draw, team2 },
 // } = game;
-console.log(game.odds);
+// console.log(game.odds);
 const { team1, x: draw, team2 } = game.odds;
 // console.log(team1);
-console.log(team1, draw, team2);
+// console.log(team1, draw, team2);
 // const [,...players1 ]
 
 //SPREAD , because on RIGHT side of =
