@@ -45,47 +45,118 @@ const restaurant = {
   },
 };
 
-//SPREAD , because on RIGHT side of =
-const arr = [1, 2, ...[3, 4]];
+//Challenge
 
-restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
-
-//REST ,  because on LEFT side of =
-const [a, b, ...others] = [1, 2, [3, 4, 5]];
-console.log(a, b);
-console.log(others);
-
-const { p = 1, q = 2, ...r } = restaurant;
-console.log(p, q);
-console.log(r);
-
-const [pizza, risotto, ...otherFood] = [
-  ...restaurant.mainMenu,
-  ...restaurant.starterMenu,
-];
-console.log(pizza, risotto, otherFood);
-
-// SPREAD in Objects
-
-const { sat, ...weekdays } = restaurant.openingHours;
-console.log(sat, weekdays);
-
-// Functions
-const add = function (...args) {
-  console.log(args.length);
-  let sum = 0;
-  for (let index = 0; index <= args.length - 1; index++) {
-    // const element = array[index];
-    // console.log(index);
-    sum += args[index];
-  }
-  return sum;
+const game = {
+  team1: 'Bayern Munich',
+  team2: 'Borrussia Dortmund',
+  players: [
+    [
+      'Neuer',
+      'Pavard',
+      'Martinez',
+      'Alaba',
+      'Davies',
+      'Kimmich',
+      'Goretzka',
+      'Coman',
+      'Muller',
+      'Gnarby',
+      'Lewandowski',
+    ],
+    [
+      'Burki',
+      'Schulz',
+      'Hummels',
+      'Akanji',
+      'Hakimi',
+      'Weigl',
+      'Witsel',
+      'Hazard',
+      'Brandt',
+      'Sancho',
+      'Gotze',
+    ],
+  ],
+  score: '4:0',
+  scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+  date: 'Nov 9th, 2037',
+  odds: {
+    team1: 1.33,
+    x: 3.25,
+    team2: 6.5,
+  },
 };
 
-// add(2, 3);
-const x = [23, 5, 7];
-console.log(add(3, 3, 4, 4, 5));
-console.log(add(...x));
+// const [players1] = game.players[0];
+// const [players2] = game.players[1];
+
+//***************CODING EXERCISE****************//
+const [players1, players2] = game.players;
+
+const [gk, ...fieldPlayers] = players1;
+console.log(gk, fieldPlayers);
+// const fieldPlayers = []
+// gk
+console.log(gk);
+console.log(fieldPlayers);
+
+const allPlayers = [...players1, ...players2];
+console.log(allPlayers);
+
+const Players1Final = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
+
+// game.odds.team1:1.33
+// const {
+//   odds: { team1, x: draw, team2 },
+// } = game;
+console.log(game.odds);
+const { team1, x: draw, team2 } = game.odds;
+// console.log(team1);
+console.log(team1, draw, team2);
+// const [,...players1 ]
+
+//SPREAD , because on RIGHT side of =
+// const arr = [1, 2, ...[3, 4]];
+
+// restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
+
+// //REST ,  because on LEFT side of =
+// const [a, b, ...others] = [1, 2, [3, 4, 5]];
+// console.log(a, b);
+// console.log(others);
+
+// const { p = 1, q = 2, ...r } = restaurant;
+// console.log(p, q);
+// console.log(r);
+
+// const [pizza, risotto, ...otherFood] = [
+//   ...restaurant.mainMenu,
+//   ...restaurant.starterMenu,
+// ];
+// console.log(pizza, risotto, otherFood);
+
+// // SPREAD in Objects
+
+// const { sat, ...weekdays } = restaurant.openingHours;
+// console.log(sat, weekdays);
+
+// // Functions
+// const add = function (...args) {
+//   console.log(args.length);
+//   let sum = 0;
+//   for (let index = 0; index <= args.length - 1; index++) {
+//     // const element = array[index];
+//     // console.log(index);
+//     sum += args[index];
+//   }
+//   return sum;
+// };
+
+// // add(2, 3);
+// const x = [23, 5, 7];
+// console.log(add(3, 3, 4, 4, 5));
+// console.log(add(...x));
 
 //*********************The Spread Operator**********//
 
